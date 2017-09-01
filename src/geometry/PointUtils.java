@@ -1,4 +1,4 @@
-package review;
+package geometry;
 
 public class PointUtils {
 
