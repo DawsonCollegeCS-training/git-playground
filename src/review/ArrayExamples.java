@@ -16,34 +16,14 @@ public class ArrayExamples {
 		}
 		return true;
 	}
-
-	// given an int[] outputs the length of the longest consecutive streak
-	 public static int consec(int[] a)
-	  {
-	    int current=1; //minimal number of consecutive
-	    int longest=0;
-	    for (int i=0; i<a.length-1; i++)
-	    {
-	      if (a[i] == a[i+1])
-	      {
-	        current++;
-	        if (longest < current)
-	          longest = current;
-	      }
-	      else {
-	        current = 1;
-	      }
-	    }
-	    return longest;
-	  }
-
 	
 	/**
-	 * Informal test of allGreater
+	 * Informal test of allGreater; should print true 5 times to indicate that we
+	 * got the output we expect.
 	 */
 	public static void main(String[] args) {
 		// 1
-		System.out.println(allGreater(2, new int[] { 9, 1, 8 }) == false);
+		System.out.println(!allGreater(2, new int[] { 9, 1, 8 }));
 		boolean correctException = false;
 		try {
 			allGreater(2, new int[] {});
@@ -58,5 +38,16 @@ public class ArrayExamples {
 		// 3
 		System.out.println(allGreater(-2, new int[] { 9, 5, 8 }));
 
+		// Once again, this time with people.
+		Person[] people = new Person[] { new Person(1, "Ali"), 
+				new Person(9, "Maude") };
+		int[] ages = new int[2];
+		for (int p = 0; p < people.length; p++) {
+			ages[p] = people[p].getAge();
+		}
+		// 4
+		System.out.println(ages[0] == 1 && ages[1] == 9);
+		// 5
+		System.out.println(!allGreater(5, ages));
 	}
 }
