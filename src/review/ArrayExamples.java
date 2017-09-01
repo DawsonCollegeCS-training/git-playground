@@ -16,7 +16,7 @@ public class ArrayExamples {
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Informal test of allGreater; should print true 5 times to indicate that we
 	 * got the output we expect.
@@ -39,8 +39,7 @@ public class ArrayExamples {
 		System.out.println(allGreater(-2, new int[] { 9, 5, 8 }));
 
 		// Once again, this time with people.
-		Person[] people = new Person[] { new Person(1, "Ali"), 
-				new Person(9, "Maude") };
+		Person[] people = new Person[] { new Person(1, "Ali", Gender.MALE), new Person(9, "Maude", Gender.FEMALE) };
 		int[] ages = new int[2];
 		for (int p = 0; p < people.length; p++) {
 			ages[p] = people[p].getAge();
