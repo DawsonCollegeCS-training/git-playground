@@ -11,10 +11,10 @@ public class PointUtils {
 			System.out.println(dots[i]);
 		}
 		sort(dots);
-		System.out.println("After srting");
+		System.out.println("After sorting");
 		for (int i = 0; i < dots.length; i++) {
 			System.out.println(dots[i]);
-		}		
+		}
 	}
 
 	public static void sort(Point[] array) {
@@ -35,6 +35,6 @@ public class PointUtils {
 			}
 		}
 	}
-	
+
 
 }
